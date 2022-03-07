@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    android:layout_height="330dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="start"
+            app:layout_constraintEnd_toStartOf="@+id/superhero_name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/superhero_image"
+            android:layout_width="160dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:transitionName="image"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/superhero_name" />
+
+        <TextView
+            android:id="@+id/superhero_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Superhero Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/superhero_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/superhero_name_label"
+            tools:text="Superhero Name too large to see how is visible now " />
+
+        <LinearLayout
+            android:id="@+id/resources_layout"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:maxWidth="180dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/superhero_image"
+            app:layout_constraintTop_toBottomOf="@+id/superhero_name">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/biography_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Biografía"
+                android:textAlignment="textStart"
+                app:icon="@drawable/ic_biography"
+                app:iconSize="25dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/stats_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Estadisticas"
+                android:textAlignment="textStart"
+                app:icon="@drawable/ic_stats"
+                app:iconSize="25dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/connections_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Conexiones"
+                android:textAlignment="textStart"
+                app:icon="@drawable/ic_connections"
+                app:iconSize="25dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/appearance_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Apariencía"
+                android:textAlignment="textStart"
+                app:icon="@drawable/ic_stats"
+                app:iconSize="25dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/jobs_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Trabajos"
+                android:textAlignment="textStart"
+                app:icon="@drawable/ic_job"
+                app:iconSize="25dp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
